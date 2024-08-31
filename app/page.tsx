@@ -63,8 +63,8 @@ export default function Home() {
   }
 
   return (
-    <main className="bg-cover bg-gradient-to-r from-blue-500 to-blue-300 h-fit">
-      <div className="bg-white/25 w-full flex flex-col h-fit">
+    <main className="bg-cover bg-gradient-to-r from-blue-500 to-blue-300">
+      <div className="bg-white/25 w-full flex flex-col h-fit lg:h-screen">
         <div className="flex flex-col md:flex-row justify-between items-center p-12">
           <Input handleSearch={handleSearch} setLocation={setLocation}/>
           <h1 className="mb-8 md:mb-0 order-1 text-white py-2 px-4 rounded-xl italic font-bold">Weather App</h1>
