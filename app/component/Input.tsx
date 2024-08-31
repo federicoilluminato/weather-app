@@ -18,7 +18,7 @@ const Input = ({handleSearch, setLocation}: InputProps) => {
       onChange={(e) => setLocation(e.target.value)}
       />
       <div className="ml-[-25px] text-white cursor-pointer">
-        <AiOutlineSearch />
+        {/* <AiOutlineSearch fontSize={20} /> */}
       </div>    
     </form>
   )
