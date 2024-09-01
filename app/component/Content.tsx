@@ -30,7 +30,7 @@ const Content = ({ data, error } : ContentProps) => {
   } else {
     content = (
       <>
-        <div className="flex md:flex-row flex-col p-12 items-center justify-between">
+        <div className="flex lg:flex-row flex-col p-12 items-center justify-between">
           <Current data={data} />
           <WeekForecast data={data} />
         </div>

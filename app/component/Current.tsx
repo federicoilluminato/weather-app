@@ -22,7 +22,7 @@ const Current = ({data} : CurrentProps) => {
     const weatherIcon = data.current.condition.icon 
     
     return (
-        <div className="flex flex-col mb-8 md:mb-0 items-start gap-2 w-1/2">
+        <div className="flex flex-col mb-8 items-start gap-3 w-1/2 md:w-full lg:w-1/2">
             <div className="flex items-center">
                 <div>
                     <h1 className="text-3xl">Today</h1>
