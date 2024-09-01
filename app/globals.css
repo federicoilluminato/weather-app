@@ -30,3 +30,21 @@
   .fade-in-up {
     animation: fadeInUp 1.5s ease-out;
   }
+
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(30px); /* Movimiento desde abajo hacia arriba */
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0); /* Posición final */
+    }
+  }
+  
+  .fade-in-right {
+    animation: fadeInRight 4s ease-out;
+  }
+
+
+  
