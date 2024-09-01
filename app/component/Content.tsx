@@ -11,6 +11,7 @@ interface ContentProps {
 
 const Content = ({ data, error } : ContentProps) => {
   let content;
+  console.log("data", data)
 
   if (Object.keys(data).length === 0 && error === "") {
     content = (
@@ -40,7 +41,7 @@ const Content = ({ data, error } : ContentProps) => {
     );
   }
 
-  return <div>{content}</div>;
+  return <div className="">{content}</div>;
 };
 
 export default Content;
