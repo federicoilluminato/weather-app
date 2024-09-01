@@ -1,9 +1,7 @@
 "use client";
 import React, {useState} from "react";
 import Input from "./component/Input";
-import Current from "./component/Current";
-import WeekForecast from "./component/WeekForecast";
-import WeatherDetails from "./component/WeatherDetails";
+import Content from "./component/Content";
 
 export default function Home() {
   const [data, setData] = useState({});
@@ -31,45 +29,14 @@ export default function Home() {
     }
   }
 
-
-  // TODO esto deberia ser un componente aparte
-  let content;
-  if(Object.keys(data).length === 0 && error === ""){
-    content = (
-      <div className="text-white text-center h-screen mt-[5rem] fade-in-up">
-        <h2 className="text-3xl font-bold mb-4">Welcome to the weather app</h2>
-        <p>Enter a city name to get the weather forecast</p>
-      </div>
-    )
-  }else if(error !== ""){
-    content = (
-      <div className="text-white text-center h-screen mt-[5rem] ">
-        <p className="text-3xl font-bold mb-4">City Not Found</p>
-        <p className="">Enter a Valid City</p>
-      </div>
-    );
-  }else{
-    content = (
-      <>
-      <div className="flex md:flex-row flex-col p-12 items-center justify-between">
-        <Current data={data}/>
-        <WeekForecast data={data} />
-      </div>
-      <div> 
-        <WeatherDetails data={data} />
-      </div>
-      </>
-    )
-  }
-
   return (
     <main className="bg-cover bg-gradient-to-r from-blue-500 to-blue-300">
       <div className="bg-white/25 w-full flex flex-col h-fit lg:h-screen">
         <div className="flex flex-col md:flex-row justify-between items-center p-12">
           <Input handleSearch={handleSearch} setLocation={setLocation} />
-          <h1 className="mb-8 md:mb-0 order-1 text-white py-2 px-4 rounded-xl italic font-bold fade-in">Weather App</h1>
+          <h1 className="mb-8 md:mb-0 order-1 text-white py-2 px-6 rounded-xl italic font-bold fade-in">Weather App</h1>
         </div>
-        {content}
+        <Content data={data} error={error}/>
       </div>
     </main>
   );
